@@ -2,6 +2,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useState } from "react";
+import Sidebar from "./components/Sidebar";
 
 export default function Home() {
   const [expand, setExpand] = useState(false)
@@ -9,7 +10,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false)
   return (
     <div className="flex h-screen">
-      {/* --sidebar--*/}
+      <Sidebar expand={expand} setExpand={setExpand} />
       <div className="flex-1 flex flex-col items-center justify-center px-4 pb-8 bg-[#292a2d] text-white relative">
         {/* FIX: Removed 'md:hidden' from this div to make it always visible */}
         <div className=" md:hidden absolute px-4 top-6 flex items-center justify-between w-full">
@@ -31,8 +32,12 @@ export default function Home() {
           </>
 
         ) :
-          (<div></div>)
+          (
+            <div></div>
+          )
         }
+        {/*prompt box */}
+        <p className="text-xs absolute bottom-1 text-gray-500">AI-generated, for reference only</p>
         <div>
         </div>
       </div>
