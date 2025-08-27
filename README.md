@@ -1,5 +1,7 @@
 DeepSeekClone
+
 Overview
+
 DeepSeekClone is a web application built with Next.js that aims to replicate features inspired by the DeepSeek platform. The project includes a responsive sidebar component with toggle functionality and tooltips, designed for intuitive navigation. It leverages modern web technologies like React, Tailwind CSS, and Next.js for a fast, optimized user experience.
 Features
 
