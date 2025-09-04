@@ -54,8 +54,8 @@ const Sidebar = ({ expand, setExpand }) => {
 
                 <button
                     className={`mt-8 flex items-center justify-center cursor-pointer ${expand
-                            ? 'bg-primary hover:opacity-90 rounded-2xl gap-2 p-2.5 w-max'
-                            : 'group relative h-9 w-9 mx-auto hover:bg-gray-500/30 rounded-lg'
+                        ? 'bg-primary hover:opacity-90 rounded-2xl gap-2 p-2.5 w-max'
+                        : 'group relative h-9 w-9 mx-auto hover:bg-gray-500/30 rounded-lg'
                         }`}
                 >
                     <Image
@@ -88,7 +88,12 @@ const Sidebar = ({ expand, setExpand }) => {
                             <div className={`w-3 h-3 absolute bg-black rotate-45 ${expand ?
                                 "right-1/2" : "left-4"}-bottom-1.5`}> </div>
                         </div>
-                    </div>{expand && <><span>Get App </span><Image alt='' src={assets.new_icon} /></>}
+                    </div>
+                    {expand && <><span>Get App </span><Image alt='' src={assets.new_icon} /></>}
+                </div >
+                <div className={`flex items-center ${expand ? ' hover:bg-white/10 rounded-lg' : 'justify-center w-full'}gap-3 text-white/60 text-sm p-2 mt-2 cursor-pointer `}>
+                    <Image src={assets.profile_icon} alt='' className='w-7' />
+                    {expand && <span>My Profile</span>}
                 </div>
             </div>
 
